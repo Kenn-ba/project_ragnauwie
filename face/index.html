@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Main</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="face.js"></script>
+  <script defer src="hands.js"></script>
+  <script defer src="script.js"></script>
+  
+</head>
+<body>
+    <div class="container">
+      <p id="emotion">Detected Emotion:<span id="detectedEmotion"></span></p>
+      <video id="video" width="720" height="560" playsinline autoplay muted></video>
+      <canvas class="output_canvas"></canvas>
+      
+      <p id="emotionText"></p>
+      <div id="continue">
+        <p>Swipe om verder naar beelden te kijken.</p>
+        <img src="images/swipeImage.png" alt="">
+      </div>
+    </div>
+    
+  <img id="emotionPicture" src="" alt="">
+  
+
+</body>
+</html> 

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@1,800&display=swap');
+
+body{
+    background-color: #1A1A1A;
+    color: white;
+}
+img{
+    z-index: 0;
+    position: fixed;
+    opacity: .2;
+}
+.leftTurtle{
+    left: 2.5%;
+    top: 15%;
+    transform: scaleX(-1);
+}
+.rightTurtle{
+    right: 2.5%;
+    top: 0%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+}
+video{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 50%;
+    border-radius: 5%;
+    border: solid 5px #5FA5B6;
+}
+h1{
+    font-family: 'K2D', sans-serif;
+    text-align: center;
+    font-size: 4rem;
+}
+p{
+    font-family: 'K2D', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: .5rem;
+}

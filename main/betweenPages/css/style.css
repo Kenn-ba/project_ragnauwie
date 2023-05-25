@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@1,800&display=swap');
+
+body{
+  background-color: #1A1A1A;
+  font-family: 'K2D', sans-serif;
+  color: #EEEEEE;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+#video{
+  width: auto;
+  height: 50vh;
+  margin-top: 5rem;
+  border-radius: 50px;
+  border: solid;
+  border-color: #5FA5B6;
+  border-width: 5px;
+}
+#emotionPicture{
+  border-radius: 200px;
+  position: fixed;
+  right: 20%;
+  bottom: 40%;
+  width: auto;
+  height: 20vh;
+}
+.borders{
+  border: solid;
+  border-color: #5FA5B6;
+  border-width: 5px;
+}
+#emotionText{
+  margin-top: 2rem;
+  font-family: 'K2D', sans-serif;
+  font-size: 3rem;
+}
+
+#continue{
+  margin-top: 5rem;
+  display: none;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+#continue p{
+  margin-bottom: -1rem;
+  font-family: 'K2D', sans-serif;
+  font-size: 1.5rem;
+}
+#continue img{
+  width: 15%;
+}
+.output_canvas{
+  display: none;
+}
