@@ -5,6 +5,7 @@ const detectedEmotion = document.getElementById('detectedEmotion');
 const verder = document.getElementById('continue');
 
 
+// Laad de modellen van het Face API-framework met behulp van Promises en Promise.all
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('./models'),
   faceapi.nets.faceLandmark68Net.loadFromUri('./models'),
@@ -13,6 +14,7 @@ Promise.all([
 ]).then(startVideo);
 
 
+//Functie om toegang te krijgen tot de camera en weer te geven
 function startVideo() {
   navigator.getUserMedia(
     { video: {} },
@@ -21,6 +23,7 @@ function startVideo() {
   )
 }
 
+//Functie om de gezichtsuitdrukking van de gebruiker te herkennen en weer te geven
 video.addEventListener('play', () => {
   setTimeout(async () => {
     const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions();
@@ -28,6 +31,9 @@ video.addEventListener('play', () => {
       const expressions = detections[0].expressions;
       const dominantExpression = Object.keys(expressions).reduce((a, b) => expressions[a] > expressions[b] ? a : b);
       console.log(dominantExpression);
+      //if statements die aan de hand van de gedtecteerde uitdrukking en emotie de juiste emotie gaan weergeven en ook de corresponderende foto voor deze emotie
+      //Gaat ook een gepaste zin weergeven voor de emotie
+      //Laat deze pas zien na een bepaalde tijd
       if (dominantExpression == "surprised") {
         localStorage.setItem("emotion", 1);
         emotionImage.src = "./emotions/surprised.jpg";
