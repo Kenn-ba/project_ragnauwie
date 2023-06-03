@@ -1,5 +1,6 @@
 const video = document.getElementById('video')
 
+// Laad de modellen van het Face API-framework met behulp van Promises en Promise.all
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('./models'),
   faceapi.nets.faceLandmark68Net.loadFromUri('./models'),
@@ -7,7 +8,7 @@ Promise.all([
   faceapi.nets.faceExpressionNet.loadFromUri('./models'),
 ]).then(startVideo);
 
-
+//Functie om toegang te krijgen tot de camera en weer te geven
 function startVideo() {
   navigator.getUserMedia(
     { video: {} },
@@ -16,6 +17,7 @@ function startVideo() {
   )
 }
 
+//Functie om de uitdrukking van de gebruiker te detecteren
 video.addEventListener('play', () => {
   setInterval(async () => {
     const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions();

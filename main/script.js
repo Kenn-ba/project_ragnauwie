@@ -14,7 +14,9 @@ const zinnen = [
   "De humor evolueert met elke swipe. Blijf kijken en ontdek alsmaar betere beelden!"
 ]
 
-//Loop om door zinnen te gaan die naast de memes te zien zijn
+//Functie om door de array mey zinnen te gaan
+//Om de 5 seconden word een zin van de array weergegeven op het scherm
+//Er worden ook classes aangesproken om de zinnen in en uit te laten faden
 let i = 0;
 
 setInterval(() => {

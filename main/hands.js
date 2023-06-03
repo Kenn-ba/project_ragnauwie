@@ -11,7 +11,7 @@ let prevFile = null;
 console.log(swipeCount)
 let lastSwipeTime = new Date().getTime();
 
-//create the arrays with the filenames of all the memes
+//Arrays voor de verschillende memes per categorie
 //dadjokes
 const mediaFiles = [
   "01.jpg",
@@ -214,7 +214,6 @@ const mediaFiles5 = [
   "18.jpg"
 ]
 
-// 0 1 2 3 4 (5) 6 7 8 9 10 11 12 13 14 15 (16) 17 18 19 20 21 22 23 24 25 26 27 28 (end)
 
 //functie om na de face scans al een beeld klaar te hebben staan voor er begonnen is met swipen
 function checkReadyMeme() {
@@ -229,14 +228,14 @@ function checkReadyMeme() {
 
 checkReadyMeme();
 let prevX = 0;
-//Arrays to store memes that were shown already
+//Arrays die gaan bijhouden welke memes er al getoond zijn zodat ze geen twee keer getoond kunnen worden
 let shownMemes1 = [];
 let shownMemes2 = [];
 let shownMemes3 = [];
 let shownMemes4 = [];
 let shownMemes5 = [];
 
-//functie om de memes te laten zien wanneer de gberuker een 'Left Swipe' doet
+//Functie om de memes te laten zien wanneer de Gebruiker een 'Left Swipe' doet
 function onResults(results) {
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
@@ -257,6 +256,9 @@ function onResults(results) {
           lastSwipeTime = Date.now();
           console.log('Left swipe: ' + swipeCount);
           swipeCount++;
+          //If statements die gaan kijken naar de waarde van swipeCount
+          //Afhangende van de waarde gaan er memes uit de juiste vategorie getoond worden
+          //Bij enkele specifieke waardes word de gebruiker doorgestuur naar een tussentijdse gezichts scan
           if (swipeCount < 5) {
             localStorage.setItem("memeCount", swipeCount);
             const folder = "./memes/dadJokes/";
@@ -350,7 +352,9 @@ function onResults(results) {
             } else if (randomFile.endsWith('.mp4')) {
               memeContainer.innerHTML = `<video id="meme" src="${folder}${randomFile}" autoplay   loop></video>`;
             }
-          } if (swipeCount == 29) {
+          }
+          //if statement om door te gaan naar de eind pagina
+          if (swipeCount == 29) {
             location.assign('../end/index.html');
           }
         }
@@ -361,6 +365,7 @@ function onResults(results) {
   canvasCtx.restore();
 }
 
+//Gaat de MediaPipe Hands library aanspreken en de juiste opties instellen
 const hands = new Hands({locateFile: (file) => {
   return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
 }});
@@ -370,14 +375,21 @@ hands.setOptions({
   minDetectionConfidence: 0.7,
   minTrackingConfidence: 0.7
 });
-  hands.onResults(onResults);
-  setInterval(function() {
-    if (Date.now() - lastSwipeTime >= 90000) {
-      // Navigate to a different page
-      location.assign('../start/index.html');
-    }
-  }, 1000);
 
+//Verbinding tussen het handtracking-systeem (hands) en de callbackfunctie (onResults)
+//De functie onResults wordt uitgevoerd telkens wanneer er handtrackingresultaten beschikbaar zijn
+hands.onResults(onResults);
+
+//Gaat elke seconde controleren of er een swipe gedetecteerd is
+//Als er 90 seconden geen swipe plaatsvind reset de installatie door terug naar start te gaan
+setInterval(function () {
+  if (Date.now() - lastSwipeTime >= 90000) {
+    // Navigate to a different page
+    location.assign('../start/index.html');
+  }
+}, 1000);
+
+//Deze code ervoor dat de camerastream wordt vastgelegd, verwerkt en doorgestuurd naar het handtracking-object (hands) voor verdere analyse.
 const camera = new Camera(videoElement, {
   onFrame: async () => {
     await hands.send({image: videoElement});
@@ -387,6 +399,7 @@ const camera = new Camera(videoElement, {
 });
 camera.start();
 
+//Functie om te bepalen of de gebruiker een swipe uitvoert
 function isSwiping(hand) {
   const [x, y] = getHandPosition(hand);
   if (x < 0.2 || x > 0.9) {
@@ -395,6 +408,7 @@ function isSwiping(hand) {
   return false;
 }
 
+//Functie die de gemiddelde positie van een hand berekent op basis van de landmarks (kenmerkende punten) van die hand
 function getHandPosition(hand) {
   let x = 0;
   let y = 0;
