@@ -9,6 +9,7 @@ let count = 0;
 let prevX = 0;
 let lastSwipeTime = new Date().getTime();
 
+//Functie om de swipes van gebruikers te detecteren
 function onResults(results) {
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
@@ -29,6 +30,8 @@ function onResults(results) {
           lastSwipeTime = Date.now();
           console.log('Left swipe');
           count++;
+          //if statements die naar de waarde van count gaan kijken
+          //telkens de waarde van count verandert gaat de text op het scherm veranderen naar de volgende stap van de uitleg
           if (count == 1) {
             explain.textContent = "We scannen eerst je gezicht om naar je huidig gevoel te kijken. Vervolgens krijg je een hoop beelden te zien.";
           }if (count == 2) {
@@ -38,7 +41,9 @@ function onResults(results) {
           }if (count == 4) {
             explain.textContent = "Hopelijk vind je het een leuke ervaring";
             verder.textContent = "Swipe om je gevoelends te scannen";
-          }if (count == 5) {
+          }
+          //wanneer count = 5 zijn alle stappen geweest en navigeert men naar de eeste gezicht scan
+          if (count == 5) {
             location.assign('../face/index.html');
           }
         }
@@ -49,6 +54,7 @@ function onResults(results) {
   canvasCtx.restore();
 }
 
+//Gaat de MediaPipe Hands library aanspreken en de juiste opties instellen
 const hands = new Hands({locateFile: (file) => {
   return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
 }});
@@ -59,15 +65,21 @@ hands.setOptions({
   minTrackingConfidence: 0.7
 });
 
+//Verbinding tussen het handtracking-systeem (hands) en de callbackfunctie (onResults)
+//De functie onResults wordt uitgevoerd telkens wanneer er handtrackingresultaten beschikbaar zijn
 hands.onResults(onResults);
 hands.onResults(onResults);
-  setInterval(function() {
+
+//Functie die elke seconde controleert of de gebruikert een swipe beweging maakt
+//Als er 90 seconden geen swipe was reset de installatie door terug naar de start pagina te gaan
+setInterval(function () {
     if (Date.now() - lastSwipeTime >= 90000) {
       // Navigate to a different page
       location.assign('../start/index.html');
     }
   }, 1000);
 
+//Deze code ervoor dat de camerastream wordt vastgelegd, verwerkt en doorgestuurd naar het handtracking-object (hands) voor verdere analyse.
 const camera = new Camera(videoElement, {
   onFrame: async () => {
     await hands.send({image: videoElement});
@@ -77,6 +89,7 @@ const camera = new Camera(videoElement, {
 });
 camera.start();
 
+//Functie om te bepalen of de gebruiker een swipe uitvoert
 function isSwiping(hand) {
   const [x, y] = getHandPosition(hand);
   if (x < 0.2 || x > 0.9) {
@@ -85,6 +98,7 @@ function isSwiping(hand) {
   return false;
 }
 
+//Functie die de gemiddelde positie van een hand berekent op basis van de landmarks (kenmerkende punten) van die hand
 function getHandPosition(hand) {
   let x = 0;
   let y = 0;
