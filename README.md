@@ -43,3 +43,6 @@ De kartonnen muren die het scherm gedeeltelijk bedekken zijn gesneden met behulp
 In één van de kartonnen is er een kleine gat manueel uitgesneden om de rasperryPi te verbinden met de RGB LED Matrix panelen. Zo konden we de rPi verstoppen zodat het niet zichtbaar is voor de gebruikers. De rPi is dan uiteindelijk geplakt met lijm en voor extra steun was er plakband gebruikt. (dit is oke omdat het in onze thema past) Op het andere karton was er een houten plaat geplakt (met lijm) met 'Cancel Culture Canceled' op geschreven. Dit was er op geschreven door gebruik te maken van een lasercutter.
 
 <img width="300" alt="cancel-culture-canceled" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/927b51a1-a3f3-4958-bcd5-498d3271e1ed">
+
+De stickers zijn gemaakt met behulp van MidJourney. Vervolgens zijn ze gestoken in Illustrator om ze net zoals de karton de juiste laagnamen te geven. (De stickers zijn geprint geweest en uitgesneden met machines.)
+<img width="300" alt="stickers" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/b821c4ec-832b-4e82-8735-1e4844f2d164"><img width="300" alt="sticker" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/99f36156-6e38-4a77-85db-e62be7d175d2">
