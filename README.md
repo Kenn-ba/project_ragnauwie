@@ -45,4 +45,5 @@ In één van de kartonnen is er een kleine gat manueel uitgesneden om de rasperr
 <img width="300" alt="cancel-culture-canceled" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/927b51a1-a3f3-4958-bcd5-498d3271e1ed">
 
 De stickers zijn gemaakt met behulp van MidJourney. Vervolgens zijn ze gestoken in Illustrator om ze net zoals de karton de juiste laagnamen te geven. (De stickers zijn geprint geweest en uitgesneden met machines.)
+
 <img width="300" alt="stickers" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/b821c4ec-832b-4e82-8735-1e4844f2d164"><img width="300" alt="sticker" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/99f36156-6e38-4a77-85db-e62be7d175d2">
