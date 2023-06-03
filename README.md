@@ -33,4 +33,5 @@ Als thema hebben we Teenage Mutant Ninja Turtles genomen. Dit speelt af in NewYo
 * Raffello = Kenneth
 * Donatello = Armin
 
-De NewYork stijl zie je ook in de materialen. Graffiti en verf dat gebruikt is op het karton. Stickers die overal geplakt zijn. Ook hebben we een grote riooldeksel dat een referentie is naar de thuisbasis van de turtles. Led lights kom je vaak tegen in NewYork. Denk maar bijvoorbeeld aan Times Square.
+De NewYork stijl zie je ook in de materialen. Graffiti en verf dat gebruikt is op het karton. Stickers die overal geplakt zijn. Ook hebben we een grote riooldeksel dat een referentie is naar de thuisbasis van de turtles. Led lights kom je vaak tegen in NewYork. Denk maar bijvoorbeeld aan Times Square. En niet te vergeten de pizza dozen die overal hangen. Dit is referentie naar Michelangelo (een enorme pizza-fan).
+
