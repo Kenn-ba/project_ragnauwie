@@ -1,3 +1,4 @@
+//Elementen aanspereken
 const videoElement = document.getElementById('video');
 const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
@@ -11,6 +12,10 @@ const zinnen = [
   "Yo het is hier te doen he!!!",
   "psst psst! Kom is hier gij!!!"
 ]
+
+//Functie om door de array mey zinnen te gaan
+//Om de 5 seconden word een zin van de array weergegeven op het scherm
+//Er worden ook classes aangesproken om de zinnen in en uit te laten faden
 let i = 0;
 
 setInterval(() => {
@@ -26,6 +31,9 @@ setInterval(() => {
   }, 500);
 }, 5000);
 
+
+//Functie die de hand van de gebruiker gaat volgen en gaat detecteren of er een swipe beweging wordt gemaakt of niet
+//Als eer een swipe gedetecteerd word gaat men naar de volgende pagina
 let prevX = 0;
 
 function onResults(results) {
@@ -55,6 +63,7 @@ function onResults(results) {
   canvasCtx.restore();
 }
 
+//Gaat de MediaPipe Hands library aanspreken en de juiste opties instellen
 const hands = new Hands({locateFile: (file) => {
   return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
 }});
@@ -65,8 +74,11 @@ hands.setOptions({
   minTrackingConfidence: 0.7
 });
 
+//Verbinding tussen het handtracking-systeem (hands) en de callbackfunctie (onResults)
+//De functie onResults wordt uitgevoerd telkens wanneer er handtrackingresultaten beschikbaar zijn
 hands.onResults(onResults);
 
+//Deze code ervoor dat de camerastream wordt vastgelegd, verwerkt en doorgestuurd naar het handtracking-object (hands) voor verdere analyse.
 const camera = new Camera(videoElement, {
   onFrame: async () => {
     await hands.send({image: videoElement});
@@ -76,6 +88,7 @@ const camera = new Camera(videoElement, {
 });
 camera.start();
 
+//Functie om te bepalen of de gebruiker een swipe uitvoert
 function isSwiping(hand) {
   const [x, y] = getHandPosition(hand);
   if (x < 0.2 || x > 0.9) {
@@ -84,6 +97,7 @@ function isSwiping(hand) {
   return false;
 }
 
+//Functie die de gemiddelde positie van een hand berekent op basis van de landmarks (kenmerkende punten) van die hand
 function getHandPosition(hand) {
   let x = 0;
   let y = 0;
