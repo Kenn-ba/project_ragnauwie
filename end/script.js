@@ -1,4 +1,4 @@
-// Access the webcam stream
+//Functie om toegang te krijgen tot de camera en weer te geven
 navigator.mediaDevices.getUserMedia({ video: true })
 .then(function (stream) {
   var videoElement = document.getElementById('videoElement');
@@ -8,7 +8,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
   console.error("Error accessing the webcam: ", error);
 });
 
-//function to navigate to the start screen after 30 seconds
+//Functie die na 30 seconden navigeert naar de start pagina
 function navigateToAnotherPage() {
     setTimeout(function() {
       location.assign("../start/index.html"); // Replace with your desired URL
