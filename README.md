@@ -89,7 +89,7 @@ De hoofd functies van de code doen 3 dingen:
 
 * Wanneer de user swipet doorgaan naar de main pagina.
 
-![alt text](code_fa.png "code swipe")
+![alt text](code_face3.png "code swipe")
 
 
 ## Stap 3: Led Installatie
