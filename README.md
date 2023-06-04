@@ -189,9 +189,9 @@ Daar vind je verschillende voorbeelden om je matrix te testen. Voorbeelden kunne
 
 Je kunt ook meerdere parameters meegeven namelijk –led-rows, –led-chain en –led-parallel.
 
-–led-rows: Het aantal rijen in een paneel. Veelvoorkomende waarden zijn 8, 16, 32 en 64. Voor een 64×64 matrix zou de waarde 64 zijn.
-–led-chain: Het aantal matrices dat in serie is verbonden. De standaardwaarde voor een enkele matrix is 1.
-–led-parallel: Matrices die parallel zijn verbonden. Veelvoorkomende waarden liggen tussen 1 en 3. De standaardwaarde voor een enkele matrix is 1.
+* –led-rows: Het aantal rijen in een paneel. Veelvoorkomende waarden zijn 8, 16, 32 en 64. Voor een 64×64 matrix zou de waarde 64 zijn.
+* –led-chain: Het aantal matrices dat in serie is verbonden. De standaardwaarde voor een enkele matrix is 1.
+* –led-parallel: Matrices die parallel zijn verbonden. Veelvoorkomende waarden liggen tussen 1 en 3. De standaardwaarde voor een enkele matrix is 1.
 
 ## Laat videos & fotos op de LED-Matrix zien
 
