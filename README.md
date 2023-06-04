@@ -179,6 +179,8 @@ Om de matrix met Python te kunnen bedienen, kun je de volgende commando's uitvoe
 VOOR PYTHON 3:
 make-build-python PYTHON=$(which python3)
 
+![Python](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/a2487622-6f8e-4d96-b278-cb992617e3d7)
+
 Hoe je naar de map "Samples" gaat:
 
 ### cd bindings/python/samples
@@ -186,6 +188,8 @@ Hoe je naar de map "Samples" gaat:
 Daar vind je verschillende voorbeelden om je matrix te testen. Voorbeelden kunnen worden gestart met het volgende commando:
 
 ### sudo python3 ./runtext.py --led-cols=64 --text="Hello World"
+
+![imgKenneth](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/8b028f9f-b978-4def-95ff-770ac3b11957)
 
 Je kunt ook meerdere parameters meegeven namelijk –led-rows, –led-chain en –led-parallel.
 
@@ -206,6 +210,9 @@ Je kunt de LED Image Viewer gebruiken om de afbeeldingen weer te geven. Hiervoor
 Video's kunnen worden afgespeeld met dit commando:
 
 ### sudo ./video-viewer voorbeeld.webm
+
+![ImgTurtle](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/35da9de8-b961-4974-affe-6f15afdcfec1)
+
 
 
 
