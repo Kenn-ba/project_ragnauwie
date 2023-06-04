@@ -32,21 +32,22 @@ De hardware die werd gebruikt waren meerdere libary's die we vonden op github he
 Als thema hebben we Teenage Mutant Ninja Turtles genomen. Dit speelt af in NewYorkCity. Om dit duidelijk te maken hebben we elk groepslid gelinkt met een ninja naar gelang onze karakter. 
 
 * Michelangelo = Bilal
-* Raffello = Kenneth
+* Raffaello = Kenneth
 * Donatello = Armin
 
-De NewYork stijl zie je ook in de materialen. Graffiti en verf dat gebruikt is op het karton. Stickers die overal geplakt zijn. Ook hebben we een grote riooldeksel dat een referentie is naar de thuisbasis van de turtles. Led lights kom je vaak tegen in NewYork. Denk maar bijvoorbeeld aan Times Square. En niet te vergeten de pizza dozen die overal hangen. Dit is referentie naar Michelangelo (een enorme pizza-fan).
+De NewYork stijl zie je in de materialen. Graffiti en verf dat gebruikt is op het karton. Stickers die overal geplakt zijn. We hebben een grote riooldeksel dat een referentie is naar de thuisbasis van de Turtles. LED lights kom je vaak tegen in NewYork. Denk maar bijvoorbeeld aan Times Square. (Dit wordt dieper uitgelegd in stap 3) En niet te vergeten de pizza dozen die overal hangen. Dit is referentie naar Michelangelo (een enorme pizza-fan). De pizza dozen hebben we gehaald van Domino's. Deze hebben we gekregen door te vragen of ze er een paar konden geven.
 
 De kartonnen muren die het scherm gedeeltelijk bedekken zijn gesneden met behulp van dit zelfgemaakte template. Hiervan zijn er twee uitgesneden en aan elkaar geplakt.
 
 <img width="300" alt="ragnauwie-karton-print-a" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/58aeb1b9-5e88-442e-9e4e-2298cc989ff6"><img width="300" alt="ragnauwie-karton-print-b" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/f2576c3c-89a7-4690-a12f-b9bb90ca9038">
 
+De afmetingen van het Illustrator bestand zijn de exacte afmetingen van het karton. De snijlijnen zet je in het rood onder een laag genaamd "Thru-cut". En de vouwlijnen zet je in het blauw onder een laag genaamd "buiging".
 
 In één van de kartonnen is er een kleine gat manueel uitgesneden om de rasperryPi te verbinden met de RGB LED Matrix panelen. Zo konden we de rPi verstoppen zodat het niet zichtbaar is voor de gebruikers. De rPi is dan uiteindelijk geplakt met lijm en voor extra steun was er plakband gebruikt. (dit is oke omdat het in onze thema past) Op het andere karton was er een houten plaat geplakt (met lijm) met 'Cancel Culture Canceled' op geschreven. Dit was er op geschreven door gebruik te maken van een lasercutter.
 
 <img width="300" alt="cancel-culture-canceled" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/927b51a1-a3f3-4958-bcd5-498d3271e1ed">
 
-De stickers zijn gemaakt met behulp van MidJourney. Vervolgens zijn ze gestoken in Illustrator om ze net zoals de karton de juiste laagnamen te geven. (De stickers zijn geprint geweest en uitgesneden met machines.)
+De stickers zijn gemaakt met behulp van MidJourney. Vervolgens zijn ze gestoken in Illustrator om ze net zoals de karton de juiste laagnamen te geven. (De stickers zijn geprint geweest en uitgesneden met machines.) De snijlijnen zitten onder de laag genaamd "CutCounter".
 
 <img width="300" alt="sticker" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/99f36156-6e38-4a77-85db-e62be7d175d2"><img width="300" alt="stickers" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/b821c4ec-832b-4e82-8735-1e4844f2d164">
 
@@ -166,7 +167,10 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
  Met deze command ga je in de directory van je libary die je hebt gedownload :
 
  ### cd rpi-rgb-led-matrix
+
+ Nadat je deze command hebt gedaan zit je in je directory. 
  
+ <img width="300" alt="sticker" src="TekstRgb.png">
 
 
 
