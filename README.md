@@ -208,5 +208,15 @@ Video's kunnen worden afgespeeld met dit commando:
 ### sudo ./video-viewer voorbeeld.webm
 
 
+## Aanvullende Parameters
 
-
+* -C Centreert de afbeelding
+* -w Bij meerdere afbeeldingen: Wachttijd in seconden tot de volgende afbeelding wordt weergegeven
+* -t Bij animaties: Stopt de uitvoering na x seconden
+* -l Bij animaties: Aantal volledige cycli
+* -D Bij animaties: Vertraging tussen frames. Standaardwaarde: -1
+* -f Bij meerdere afbeeldingen: Permanente cyclus door alle afbeeldingen
+* -s Bij meerdere afbeeldingen: Willekeurige volgorde
+* --led-rows= Aantal rijen per matrix. Gewoonlijk 8, 16, 32 of 64
+* --led-cols= Aantal kolommen per matrix. Gewoonlijk 8, 16, 32 of 64
+* --led-chain= Aantal matrices die in serie zijn verbonden
