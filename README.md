@@ -130,13 +130,15 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
  Als je nog steeds geluid nodig hebt, moet je een externe USB-geluidsadapter gebruiken. 
  Om het ingebouwde geluid uit te schakelen, open je eerst het configuratiebestand via de terminal :
 
- ## sudo nano /boot/config.txt
+ ### sudo nano /boot/config.txt
  
  Zoek de regel "dtparam=audio=on" en verander deze in "dtparam=audio=off". Sla het bestand nu op met de toetscombinatie Ctrl+O, bevestig met Enter en verlaat de editor vervolgens met de toetscombinatie Ctrl+X.
 
  Herstart daarna de Raspberry Pi zodat de wijziging effect heeft:
 
- ## sudo reboot
+ ### sudo reboot
+
+
 
 
 
