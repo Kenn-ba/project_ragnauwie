@@ -174,3 +174,4 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
  
 ![TekstRgb](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/0a5b9b74-78d6-451c-ad00-81e9f030b9a6)
 
+![TekstRgb](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/e7817451-5728-419c-84bc-7a893dcf1eae)
