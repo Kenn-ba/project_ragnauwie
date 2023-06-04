@@ -172,4 +172,36 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
 
  Nadat je deze command hebt gedaan zit je in je directory. 
  
-![alt tekst](TekstRgb.png "alt tekst")
+
+Om de matrix met Python te kunnen bedienen, kun je de volgende commando's uitvoeren in de terminal:
+
+VOOR PYTHON 3:
+make-build-python PYTHON=$(which python3)
+
+Hoe je naar de map "Samples" gaat:
+
+### cd bindings/python/samples
+
+Daar vind je verschillende voorbeelden om je matrix te testen. Voorbeelden kunnen worden gestart met het volgende commando:
+
+### sudo python3 ./runtext.py --led-cols=64 --text="Hello World"
+
+Je kunt ook meerdere parameters meegeven namelijk –led-rows, –led-chain en –led-parallel.
+
+–led-rows: Het aantal rijen in een paneel. Veelvoorkomende waarden zijn 8, 16, 32 en 64. Voor een 64×64 matrix zou de waarde 64 zijn.
+–led-chain: Het aantal matrices dat in serie is verbonden. De standaardwaarde voor een enkele matrix is 1.
+–led-parallel: Matrices die parallel zijn verbonden. Veelvoorkomende waarden liggen tussen 1 en 3. De standaardwaarde voor een enkele matrix is 1.
+
+## Laat videos & fotos op de LED-Matrix zien
+
+Nu komen we bij het creatieve gedeelte het weergeven van afbeeldingen, GIFs, graphics en volledige video's op de matrix. De beeldbestanden die moeten worden weergegeven, moeten in deze map worden opgeslagen:
+
+### cd /home/pi/rpi-rgb-led-matrix/utils
+
+Je kunt de LED Image Viewer gebruiken om de afbeeldingen weer te geven. Hiervoor heb je het volgende commando nodig:
+
+### sudo ./led-image-viewer voorbeeld.gif
+
+Video's kunnen worden afgespeeld met dit commando:
+
+### sudo ./video-viewer voorbeeld.webm
