@@ -172,4 +172,5 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
 
  Nadat je deze command hebt gedaan zit je in je directory. 
  
-![alt tekst](TekstRgb.png "alt tekst")
+![TekstRgb](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/0a5b9b74-78d6-451c-ad00-81e9f030b9a6)
+
