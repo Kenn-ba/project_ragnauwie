@@ -172,6 +172,7 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
 
  Nadat je deze command hebt gedaan zit je in je directory. 
  
+<<<<<<< HEAD
 
 Om de matrix met Python te kunnen bedienen, kun je de volgende commando's uitvoeren in de terminal:
 
@@ -205,3 +206,8 @@ Je kunt de LED Image Viewer gebruiken om de afbeeldingen weer te geven. Hiervoor
 Video's kunnen worden afgespeeld met dit commando:
 
 ### sudo ./video-viewer voorbeeld.webm
+=======
+![TekstRgb](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/0a5b9b74-78d6-451c-ad00-81e9f030b9a6)
+
+![TekstRgb](https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/e7817451-5728-419c-84bc-7a893dcf1eae)
+>>>>>>> f90c6ae9386c30b28cf7765643a8161047be6d10
