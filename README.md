@@ -54,17 +54,19 @@ De stickers zijn gemaakt met behulp van MidJourney. Vervolgens zijn ze gestoken 
 
 We maken gebruik van 2 libary's:
 * MediaPipe Hands
-* face-api
+* Face-api
 
 ### Start pagina
 
 De eerste pagina die te zien is op de installatie is heel simpel.
-Op vlak van javascript doet het maar 3 dingen:
-* camera feed tonen
-* door een array van zinnen gaan om te laten zien op het scherm 
-* detecteren of de user swipet om door te gaan naar de volgende pagina
+Op vlak van javascript doet het maar 2 dingen:
+* Door een array van zinnen gaan om te laten zien op het scherm
+ 
+![alt text](code_start1.png "code zinnen")
 
+* Detecteren of de user swipet om door te gaan naar de volgende pagina
 
+![alt text](code_start2.png "code swipe")
 
 
 
@@ -91,6 +93,8 @@ Als er meerdere matrices met elkaar verbonden moeten worden, ga dan als volgt te
 Let op: Pas bij het aansluiten van meerdere matrices de voeding dienovereenkomstig aan!
 
 ### Tussenplaatsing RGB Matrix Controller
+
+Bij onze installatie hebben wij gebruik gemaakt van een RGB Matrix Controller
 
 Als alternatief voor het rechtstreeks verbinden van de matrices via de GPIO-strip op de Raspberry Pi, kunt u ook de RGB-Matrix controller gebruiken om maximaal drie matrices parallel aan te sturen. Ook hier is er de mogelijkheid om extra matrices in serie aan te sluiten.
 
