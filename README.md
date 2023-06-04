@@ -73,12 +73,23 @@ Op vlak van javascript doet het maar 2 dingen:
 De intro pagina geeft de user eigenlijk uitleg over wat de installatie doet en hoe men hem moet gebruiken.
 Door te swipen krijgt de user alle nodige uitleg te zien.
 
+![alt text](code_intro.png "code intro")
 
+### Face pagina
 
+Op de face pagina wordt de user zijn/haar gezicht gescant via de camera feed. Dit gebeurt met behulp fan de Face-api library.
+De hoofd functies van de code doen 3 dingen:
+* De user zijn/haar gezicht scannen en de hoofd uitdrukking opslaan.
 
+![alt text](code_face1.png "code scannen gezicht")
 
+* Bij de gedtecteerde uitdrukking de juiste foto en zin tonen.
 
+![alt text](code_face2.png "code juiste emotie tonen")
 
+* Wanneer de user swipet doorgaan naar de main pagina.
+
+![alt text](code_fa.png "code swipe")
 
 
 ## Stap 3: Led Installatie
@@ -89,6 +100,8 @@ Eerst moeten we de LED-matrix in zijn werking zetten.
 
 Om te beginnen moet de kabel voor de voeding die bij de set is meegeleverd, worden aangesloten op de LED-matrix en de voeding.
 Als er meerdere matrices met elkaar verbonden moeten worden, ga dan als volgt te werk: Er kunnen maximaal drie matrices parallel worden bediend op de 40-pins 
+
+Hieronder zie je welke 2 kabels je erin moet steken.<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-1.png">
 
 Let op: Pas bij het aansluiten van meerdere matrices de voeding dienovereenkomstig aan!
 
@@ -101,7 +114,29 @@ Als alternatief voor het rechtstreeks verbinden van de matrices via de GPIO-stri
 Het voordeel van het aansturen via het controllerbord is de aanzienlijk eenvoudigere verbindingsmogelijkheid. Bovendien kan het controllerbord de Raspberry Pi van stroom voorzien en is er al een ventilator geïnstalleerd die voor voldoende koeling zorgt.
 
 Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hieronder ziet.
-<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-2.png"> <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png">
+ <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png">
+
+ ### Installatie LED Matrix op Raspberry Pi
+ 
+ De eerste stap om de matrix met de Raspberry Pi te kunnen bedienen is het installeren van de libary die je online kunt vinden. Open de terminal en voer het volgende in:
+
+ ## sudo apt-get update
+ ## sudo apt-get install git
+ ## git clone https://github.com/hzeller/rpi-rgb-led-matrix
+
+
+ Vervolgens moet het ingebouwde geluid worden uitgeschakeld van de Raspberry Pi. 
+ 
+ Als je nog steeds geluid nodig hebt, moet je een externe USB-geluidsadapter gebruiken. 
+ Om het ingebouwde geluid uit te schakelen, open je eerst het configuratiebestand via de terminal :
+
+ ## sudo nano /boot/config.txt
+ 
+ Zoek de regel "dtparam=audio=on" en verander deze in "dtparam=audio=off". Sla het bestand nu op met de toetscombinatie Ctrl+O, bevestig met Enter en verlaat de editor vervolgens met de toetscombinatie Ctrl+X.
+
+ Herstart daarna de Raspberry Pi zodat de wijziging effect heeft:
+
+ ## sudo reboot
 
 
 
