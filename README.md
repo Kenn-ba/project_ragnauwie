@@ -122,10 +122,12 @@ Eerst moeten we de LED-matrix in zijn werking zetten.
 ### Zet de LED-matrix in werking
 
 Om te beginnen moet de kabel voor de voeding die bij de set is meegeleverd, worden aangesloten op de LED-matrix en de voeding.
-Als er meerdere matrices met elkaar verbonden moeten worden, ga dan als volgt te werk: Er kunnen maximaal drie matrices parallel worden bediend op de 40-pins 
-
+Als er meerdere matrices met elkaar verbonden moeten worden, ga dan als volgt te werk: Er kunnen maximaal drie matrices parallel worden bediend op de 40-pins.
 Hieronder zie je welke 2 kabels je erin moet steken.
+
 <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-1.png">
+
+
 
 Let op: Pas bij het aansluiten van meerdere matrices de voeding dienovereenkomstig aan!
 
@@ -170,4 +172,4 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
 
  Nadat je deze command hebt gedaan zit je in je directory. 
  
-! [alt tekst](TekstRgb.png "alt tekst")
+![alt tekst](TekstRgb.png "alt tekst")
