@@ -83,7 +83,7 @@ De hoofd functies van de code doen 3 dingen:
 
 ![alt text](code_face1.png "code scannen gezicht")
 
-* Bij de gedtecteerde uitdrukking de juiste foto en zin tonen.
+* Bij de gedecteerde uitdrukking de juiste foto en zin tonen.
 
 ![alt text](code_face2.png "code juiste emotie tonen")
 
@@ -91,6 +91,22 @@ De hoofd functies van de code doen 3 dingen:
 
 ![alt text](code_face3.png "code swipe")
 
+### Main pagina
+
+De main pagina is waar de installatie eigenlijk om draait. Op deze pagina gaat de user verschillende memes van verschillende categorieën humor te zien krijgen.
+Om door de beelden te gaan moet de user swipen, bij elke swipe beweging krijgt de user een volgende meme te zien. Op bepaalde momenten wordt de user ook naar een volgende pagina gestuurd om nog eens zijn/haar gezicht te scannen, deze code is hetzelfde als bij de face pagina.
+Op vlak van javascript zijn er 2 hoofd functies:
+* Telkens een andere random meme laten zien wanneer de user swipet.
+
+![alt text](code_main1.png "code memes tonen")
+![alt text](code_main2.png "code memes tonen")
+![alt text](code_main3.png "code memes tonen")
+![alt text](code_main4.png "code memes tonen")
+![alt text](code_main5.png "code memes tonen")
+
+* Als er 90 seconden lang geen swipe beweging plaatsvind terug naar de start pagina gaan. (De code komt ook voor op de into en face pagina's)
+
+![alt text](code_main6.png "code reset")
 
 ## Stap 3: Led Installatie
 
@@ -101,7 +117,8 @@ Eerst moeten we de LED-matrix in zijn werking zetten.
 Om te beginnen moet de kabel voor de voeding die bij de set is meegeleverd, worden aangesloten op de LED-matrix en de voeding.
 Als er meerdere matrices met elkaar verbonden moeten worden, ga dan als volgt te werk: Er kunnen maximaal drie matrices parallel worden bediend op de 40-pins 
 
-Hieronder zie je welke 2 kabels je erin moet steken.<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-1.png">
+Hieronder zie je welke 2 kabels je erin moet steken.
+<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-1.png">
 
 Let op: Pas bij het aansluiten van meerdere matrices de voeding dienovereenkomstig aan!
 
@@ -114,15 +131,14 @@ Als alternatief voor het rechtstreeks verbinden van de matrices via de GPIO-stri
 Het voordeel van het aansturen via het controllerbord is de aanzienlijk eenvoudigere verbindingsmogelijkheid. Bovendien kan het controllerbord de Raspberry Pi van stroom voorzien en is er al een ventilator geïnstalleerd die voor voldoende koeling zorgt.
 
 Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hieronder ziet.
- <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png">
-
+ <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png"><img width="300" alt="sticker" src="https://www.reichelt.com/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-2.png"> 
  ### Installatie LED Matrix op Raspberry Pi
  
  De eerste stap om de matrix met de Raspberry Pi te kunnen bedienen is het installeren van de libary die je online kunt vinden. Open de terminal en voer het volgende in:
 
- ## sudo apt-get update
- ## sudo apt-get install git
- ## git clone https://github.com/hzeller/rpi-rgb-led-matrix
+ ### sudo apt-get update
+ ### sudo apt-get install git
+ ### git clone https://github.com/hzeller/rpi-rgb-led-matrix
 
 
  Vervolgens moet het ingebouwde geluid worden uitgeschakeld van de Raspberry Pi. 
@@ -137,6 +153,13 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
  Herstart daarna de Raspberry Pi zodat de wijziging effect heeft:
 
  ### sudo reboot
+
+ ## Tekst op de LED-Matrix laten gaan
+
+ Met deze command ga je in de directory van je libary die je hebt gedownload :
+
+ ### cd rpi-rgb-led-matrix
+ 
 
 
 
