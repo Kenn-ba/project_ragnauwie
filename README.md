@@ -1,4 +1,6 @@
-﻿# Project Ragnauwie
+﻿
+
+# Project Ragnauwie
 
 ![alt text](Installatie.JPG "Installatie")
 
@@ -25,7 +27,7 @@ De hardware die werd gebruikt waren meerdere libary's die we vonden op github he
 * Plakband
 * Pizza dozen x7
 
-## Design
+## Stap 1: Design
 
 Als thema hebben we Teenage Mutant Ninja Turtles genomen. Dit speelt af in NewYorkCity. Om dit duidelijk te maken hebben we elk groepslid gelinkt met een ninja naar gelang onze karakter. 
 
@@ -47,3 +49,53 @@ In één van de kartonnen is er een kleine gat manueel uitgesneden om de rasperr
 De stickers zijn gemaakt met behulp van MidJourney. Vervolgens zijn ze gestoken in Illustrator om ze net zoals de karton de juiste laagnamen te geven. (De stickers zijn geprint geweest en uitgesneden met machines.)
 
 <img width="300" alt="sticker" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/99f36156-6e38-4a77-85db-e62be7d175d2"><img width="300" alt="stickers" src="https://github.com/Kenn-ba/project_ragnauwie/assets/127089430/b821c4ec-832b-4e82-8735-1e4844f2d164">
+
+## Stap 2: Code
+
+We maken gebruik van 2 libary's:
+* MediaPipe Hands
+* face-api
+
+### Start pagina
+
+De eerste pagina die te zien is op de installatie is heel simpel.
+Op vlak van javascript doet het maar 3 dingen:
+* camera feed tonen
+* door een array van zinnen gaan om te laten zien op het scherm 
+* detecteren of de user swipet om door te gaan naar de volgende pagina
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Stap 3: Led Installatie
+
+Eerst moeten we de LED-matrix in zijn werking zetten.
+
+### Zet de LED-matrix in werking
+
+Om te beginnen moet de kabel voor de voeding die bij de set is meegeleverd, worden aangesloten op de LED-matrix en de voeding.
+Als er meerdere matrices met elkaar verbonden moeten worden, ga dan als volgt te werk: Er kunnen maximaal drie matrices parallel worden bediend op de 40-pins 
+
+Let op: Pas bij het aansluiten van meerdere matrices de voeding dienovereenkomstig aan!
+
+### Tussenplaatsing RGB Matrix Controller
+
+Als alternatief voor het rechtstreeks verbinden van de matrices via de GPIO-strip op de Raspberry Pi, kunt u ook de RGB-Matrix controller gebruiken om maximaal drie matrices parallel aan te sturen. Ook hier is er de mogelijkheid om extra matrices in serie aan te sluiten.
+
+Het voordeel van het aansturen via het controllerbord is de aanzienlijk eenvoudigere verbindingsmogelijkheid. Bovendien kan het controllerbord de Raspberry Pi van stroom voorzien en is er al een ventilator geïnstalleerd die voor voldoende koeling zorgt.
+
+<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png">
+
+
