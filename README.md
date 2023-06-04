@@ -170,7 +170,8 @@ Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hierond
 
  Nadat je deze command hebt gedaan zit je in je directory. 
  
- <img width="300" alt="sticker" src="TekstRgb.png">
+ ![alt text](TekstRgb.png "Installatie")
+
 
 
 
