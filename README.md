@@ -108,6 +108,12 @@ Op vlak van javascript zijn er 2 hoofd functies:
 
 ![alt text](code_main6.png "code reset")
 
+### End pagina
+
+De end pagina is zeer simpel. De user krijgt de camera feed te zien en na 30 seconden navigeert de pagina weer naar de start pagina.
+
+![alt text](code_end.png "code end")
+
 ## Stap 3: Led Installatie
 
 Eerst moeten we de LED-matrix in zijn werking zetten.
@@ -132,6 +138,7 @@ Het voordeel van het aansturen via het controllerbord is de aanzienlijk eenvoudi
 
 Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hieronder ziet.
  <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png"><img width="300" alt="sticker" src="https://www.reichelt.com/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-2.png"> 
+ 
  ### Installatie LED Matrix op Raspberry Pi
  
  De eerste stap om de matrix met de Raspberry Pi te kunnen bedienen is het installeren van de libary die je online kunt vinden. Open de terminal en voer het volgende in:
