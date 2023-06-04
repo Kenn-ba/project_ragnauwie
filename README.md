@@ -70,8 +70,8 @@ Op vlak van javascript doet het maar 2 dingen:
 
 ### Intro pagina
 
-De intro pagina geeft de gebruiker eigenlijk uitleg over wat de installatie doet en hoe men hem moet gebruiken
-
+De intro pagina geeft de user eigenlijk uitleg over wat de installatie doet en hoe men hem moet gebruiken.
+Door te swipen krijgt de user alle nodige uitleg te zien.
 
 
 
@@ -101,8 +101,8 @@ Als alternatief voor het rechtstreeks verbinden van de matrices via de GPIO-stri
 Het voordeel van het aansturen via het controllerbord is de aanzienlijk eenvoudigere verbindingsmogelijkheid. Bovendien kan het controllerbord de Raspberry Pi van stroom voorzien en is er al een ventilator geïnstalleerd die voor voldoende koeling zorgt.
 
 Je zet de RGB Matrix controller op je Raspberry PI in deze pinnen die je hieronder ziet.
-<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-2.png">
+<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/LED-Matrix-in-Betrieb-nehmen-2.png"> <img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png">
 
-<img width="300" alt="sticker" src="https://www.reichelt.de/magazin/wp-content/uploads/2020/07/Zwischenschaltung-des-Matrix-Controllerboards.png">
+
 
 
