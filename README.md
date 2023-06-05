@@ -6,6 +6,8 @@
 
 # Video Installatie
 
+![alt tekst](thumbnail.png "thumbnail")
+
 https://www.youtube.com/watch?v=8XqZLcnq9KE&ab_channel=Zuko
 
 ## Achtergrond
